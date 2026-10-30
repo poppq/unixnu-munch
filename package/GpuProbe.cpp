@@ -1482,7 +1482,7 @@ void memBench() {
 
 void gpuThread(void *, wait_result_t) {
     IOSleep(5000);
-    memBench();
+    if (gMode != 1) memBench();
     native_gpu_step = 1;
     unsigned have = 0;
     for (unsigned w = 0; w < GPB_WINDOWS; ++w) if (mapWindow(w)) have |= 1u << w;
