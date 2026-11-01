@@ -513,6 +513,7 @@ kernel_args = [
   # SMMU leaves CBNDX 0xff in the type (pipa measured 0x000203ff on the same part); the pipa
   # branch of ArmSmmu4K, which kits/ArmSmmu4K now points at, checks only the type. The row to
   # read is "GMUCTX ..." on the console, then "GPUROW13/14".
+  "pipa-gpu=1",
   # "pipa-gpu=8",  # dropped: bbc2275 measured that pipa-gpu stops before user space
   # "pcie=9",  # off for the first image: only the read-only step was measured on alioth
   # "pcie_skip=32",
